@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-// Importamos las rutas de usuarios
-app.use(require("./routes/usuario.routes"));
+// Importamos las rutas
+app.use(require("./routes/index.routes"));
 
 // Configuración a la base de datos
 mongoose.connect(
