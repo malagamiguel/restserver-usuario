@@ -1,6 +1,7 @@
 // Requerimientos
 require("./config/config");
 
+const path = require("path");
 const express = require("express");
 
 // Mongoose
@@ -17,6 +18,9 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+
+// habilitar la carpeta public
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Importamos las rutas
 app.use(require("./routes/index.routes"));
