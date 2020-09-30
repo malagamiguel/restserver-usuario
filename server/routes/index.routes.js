@@ -5,5 +5,9 @@ const app = express();
 app.use(require("./usuario.routes"));
 // Importamos las rutas de login
 app.use(require("./login.routes"));
+// Importamos las rutas de categoria
+app.use(require("./categoria.routes"));
+// Importamos las rutas de productos
+app.use(require("./producto.routes"));
 
 module.exports = app;

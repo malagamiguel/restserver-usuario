@@ -45,7 +45,7 @@ const usuarioSchema = new Schema(
 );
 
 usuarioSchema.methods.toJSON = function () {
-  // this en este caso hara referencia a lo devuelto por usuarioSchema
+  // this en este caso hará referencia a lo devuelto por usuarioSchema
   let user = this;
   let userObject = user.toObject();
   delete userObject.password;
